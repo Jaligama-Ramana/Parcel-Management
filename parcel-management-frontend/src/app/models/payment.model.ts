@@ -26,6 +26,13 @@ export interface PaymentRequest {
   cardholderName: string;
 }
 
+export interface ApiResponse<T> {
+  success: boolean;
+  message: string;
+  data?: T;
+  timestamp: Date;
+}
+
 export enum PaymentMethod {
   CREDIT_CARD = 'CREDIT_CARD',
   DEBIT_CARD = 'DEBIT_CARD',
